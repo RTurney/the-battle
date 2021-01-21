@@ -1,7 +1,5 @@
 require 'sinatra'
 
-
-
 class Battle < Sinatra::Base
 enable :sessions
 
