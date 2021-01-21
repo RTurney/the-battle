@@ -7,7 +7,7 @@ class Battle < Sinatra::Base
 enable :sessions
 
   get '/' do
-    erb(:index)
+    erb :index
   end
 
   post '/names' do
@@ -20,6 +20,13 @@ enable :sessions
     @player_1 = session[:player_1]
     @player_2 = session[:player_2]
     erb :play
+  end
+
+  get '/attack' do
+    @player_1 = session[:player_1]
+    @player_2 = session[:player_2]
+    erb:attack
+    
   end
 
 
